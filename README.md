@@ -13,5 +13,5 @@ Test the extension by using the keyboard shortcuts below..
 
 `Ctrl+Shift+V` = Rename current tab title  
 `Ctrl+Shift+Q` = Pin / Unpin current tab  
-
+`Ctrl+Shift+E` = Edit the page contents 
 

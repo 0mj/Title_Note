@@ -28,6 +28,12 @@
         "default": "Ctrl+Shift+Q"
       },
       "description": "Pin or unpin the current tab"
+    },
+    "enable-edit-mode": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Enable page editing"
     }
   }
 }
