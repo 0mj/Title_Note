@@ -27,6 +27,16 @@ chrome.commands.onCommand.addListener((command) => {
         }
       });
     });
+  } else if (command === "enable-edit-mode") {
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      chrome.scripting.executeScript({
+        target: {tabId: tabs[0].id},
+        func: () => {
+          document.body.contentEditable = true;
+          alert('Page is now editable. Press "Ctrl+Shift+E" again to disable.');
+        }
+      });
+    });
   }
 
 });
