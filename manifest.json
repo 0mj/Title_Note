@@ -1,39 +1,45 @@
 {
   "manifest_version": 3,
-  "name": "Tab Manager Extension",
+  "name": "Browser Toolbox",
   "version": "1.0",
-  "description": "Execute bookmarklet and pin tabs using keyboard shortcuts",
-  "permissions": ["activeTab", "scripting", "tabs"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
   "host_permissions": [
     "<all_urls>"
   ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "background.js"
   },
   "commands": {
-    "change-title": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+V"
-      },
-      "description": "change title of current page"
-    },
     "execute-bookmarklet": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y"
       },
-      "description": "Execute the bookmarklet"
+      "description": "Execute bookmarklet"
     },
     "pin-tab": {
       "suggested_key": {
         "default": "Ctrl+Shift+Q"
       },
-      "description": "Pin or unpin the current tab"
+      "description": "Pin or unpin current tab"
+    },
+    "change-title": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V"
+      },
+      "description": "Change page title"
     },
     "enable-edit-mode": {
       "suggested_key": {
         "default": "Ctrl+Shift+E"
       },
-      "description": "Enable page editing"
+      "description": "Toggle page edit mode"
     }
   }
 }
